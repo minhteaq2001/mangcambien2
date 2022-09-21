@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mcb.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"/>
+      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>mcb</title>
+  </head>
+
+  <body>
+    <script src="mcb.js"></script>
+    <h1 class=" text-white text-center" style="background-image: linear-gradient(to right bottom, #f00606c3, #91ed11ba);border-radius:10px;font-weight: bold"> <i>Nguyễn Bá Minh B19DCDT143</i></h1>
+    <div class="container-fluid pt-3 ">
+
+      <div class="row " style="justify-content: space-around">
+      
+        <div class="col-4  display-6 ">
+              <div id="bg-success" style="height:200px;border-radius:10px; font-weight: bold">
+                <div class="pt-5 text-center  text-light">Nhiệt Độ
+                  <div id="nhietdo"></div>
+                  <script>
+                     var y = document.getElementById("nhietdo").innerHTML = Math.floor(Math.random() * 100);
+                     document.getElementById("nhietdo").innerHTML = Math.floor(Math.random() * 100)+"&degC";
+                    if (y < 20){
+                    document.getElementById("bg-success").style.backgroundColor = "pink";
+                  }else if(y>=20 &&y < 40) {
+                    document.getElementById("bg-success").style.backgroundColor = "yellow";
+                  }else if( y < 60){
+                    document.getElementById("bg-success").style.backgroundColor = "gray";
+                  }else{
+                    document.getElementById("bg-success").style.backgroundColor = "Lime";
+                  }
+                  
+                  </script>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col-4 display-6" >
+          
+          <div id="MINH" style="height:200px;border-radius:10px; font-weight: bold">
+            <div class="pt-5 text-center  text-light">Độ Ẩm
+                
+              <div id="doam"></div>
+                <script>
+                 var x = document.getElementById("doam").innerHTML = Math.floor(Math.random() * 100);
+                  document.getElementById("doam").innerHTML = Math.floor(Math.random() * 100)+"%";
+                  if (x < 20){
+                    document.getElementById("MINH").style.backgroundColor = "orange";
+                  }else if(x>=20 && x < 40) {
+                    document.getElementById("MINH").style.backgroundColor = "Purple";
+                  }else if( x < 60){
+                    document.getElementById("MINH").style.backgroundColor = "red";
+                  }else{
+                    document.getElementById("MINH").style.backgroundColor = "Aqua";
+                  }
+                  
+                </script>
+                  
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4 display-6" >
+          
+          <div id="Minh1" style="height:200px;border-radius:10px; font-weight: bold">
+            <div class="pt-5 text-center  text-light">Ánh sáng
+               <div id="anhsang"></div>
+                <script>
+                 var z = document.getElementById("anhsang").innerHTML = Math.floor(Math.random() * 100);
+                 document.getElementById("anhsang").innerHTML = Math.floor(Math.random() * 100)+"Lux";
+                  if (z < 20){
+                    document.getElementById("Minh1").style.backgroundColor = "orange";
+                  }else if(z>=20 && z < 40) {
+                    document.getElementById("Minh1").style.backgroundColor = "yellow";
+                  }else if( z < 60){
+                    document.getElementById("Minh1").style.backgroundColor = "red";
+                  }else{
+                    document.getElementById("Minh1").style.backgroundColor = "blue";
+                  }
+                  
+                </script>
+  
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container-fluid pt-2">
+
+      <div class="row" style="justify-content: space-around">
+
+        <div class="col-8 display-6 bg-success " style="height:500px;border-radius:10px; font-weight: bold">
+            <div class="text-center  text-light">Biểu đồ</div>
+            <img src="https://thuathienhue.gov.vn/Portals/0/Nam%202018/Thu/hinh%206.6.bmp" class="mx-auto d-block" style="width:70%; border-radius: 10px;">   
+            
+        </div>
+        
+        <div class="col-sm-4  ">
+
+            <div id="button1" style="height:250px;border-radius:10px; font-weight: bold;text-align: center;background:#69f124;font-size:40px;font-weight: bold;color:white">
+              <div class="ok" >Button_1</div>
+              <button onclick="document.getElementById('button1').style.backgroundColor = 'green'" style="border-radius:10px;background:green;color:white;font-weight: bold" >ON</button>
+              <button onclick="document.getElementById('button1').style.backgroundColor = 'red'" style="border-radius:10px;background: #da2330;color:white;font-weight: bold" >OFF</button>
+            </div>
+
+             <div id="button2" style="height:250px;border-radius:10px; font-weight: bold;text-align: center;background: #e009a0a6;font-size:40px;font-weight: bold;color:white">
+              <div class="ok1">Button_2</div>
+              <button onclick="document.getElementById('button2').style.backgroundColor = 'blue'" style="border-radius:10px;background: blue;color:white;font-weight: bold;" >ON</button>
+              <button onclick="document.getElementById('button2').style.backgroundColor = 'orange'" style="border-radius:10px;background: orangered;color:white;font-weight: bold" >OFF</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    
+    
+
+  </body>
+  
+</html>
